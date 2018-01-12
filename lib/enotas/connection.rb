@@ -1,4 +1,4 @@
-require 'faraday_middleware'
+require "faraday_middleware"
 
 module Enotas
   module Connection
@@ -21,6 +21,5 @@ module Enotas
         connection.adapter :net_http
       end
     end
-
   end
 end

@@ -1,7 +1,6 @@
 module Enotas
   module Model
     class Nfe
-
       include Virtus.model
 
       attribute :id, String
@@ -17,7 +16,6 @@ module Enotas
 
       attribute :servico, Servico
       attribute :cliente, Cliente
-
     end
   end
 end

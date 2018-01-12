@@ -1,7 +1,6 @@
 module Enotas
   module Model
     class Servico
-
       include Virtus.model
 
       attribute :descricao, String
@@ -17,7 +16,6 @@ module Enotas
       attribute :valorInss, Decimal
       attribute :valorIr, Decimal
       attribute :valorPis, Decimal
-
     end
   end
 end

@@ -1,6 +1,5 @@
 module Enotas
   module Endpoints
-
     def nfe_list(firm_id, body = {})
       get("empresas/#{firm_id}/nfes", body)
     end
@@ -40,6 +39,5 @@ module Enotas
     def nfe_get_xml_by_external_id(firm_id, external_id)
       get("empresas/#{firm_id}/nfes/#{external_id}/xml")
     end
-
   end
 end

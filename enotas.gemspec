@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{E-Notas}
   spec.description   = %q{E-Notas gateway wrapper}
-  spec.homepage      = "https://github.com.br/enotas/enotas-ruby"
+  spec.homepage      = "https://github.com/luzvc/enotas-client"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'

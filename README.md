@@ -54,7 +54,7 @@ nfe.endereco = {
   cep: '32323111'
 }
 
-nfe.nfe_create('id-da-empresa-no-enotas', nfe)
+client.nfe_create('id-da-empresa-no-enotas', nfe)
 ```
 
 ## Contribuindo
