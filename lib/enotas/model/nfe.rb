@@ -1,21 +1,25 @@
 module Enotas
   module Model
-    class Nfe
-      include Virtus.model
-
+    class Nfe < Nf
       attribute :id, String
       attribute :enviarPorEmail, String
       attribute :ambienteEmissao, String
-      attribute :tipo, String
-      attribute :idExterno, String
+      attribute :naturezaOperacao, String
+      attribute :finalidade, String
       attribute :consumidorFinal, String
       attribute :indicadorPresencaConsumidor, String
+      attribute :enviarPorEmail, String
+
+      attribute :tipo, String
+      attribute :idExterno, String
       attribute :valorTotal, String
       attribute :idExternoSubstituir, Float
       attribute :nfeIdSubstitituir, Float
 
-      attribute :servico, Servico
-      attribute :cliente, Cliente
+      attribute :informacoesAdicionais, String
+
+      attribute :itens, Array[Item]
+      attribute :transporte, Transporte
     end
   end
 end

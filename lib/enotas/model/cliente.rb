@@ -1,7 +1,6 @@
 module Enotas
   module Model
     class Cliente
-
       include Virtus.model
 
       attribute :tipoPessoa, String
@@ -14,7 +13,6 @@ module Enotas
       attribute :telefone, String
 
       attribute :endereco, Endereco
-
     end
   end
 end
