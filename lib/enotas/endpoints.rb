@@ -1,5 +1,14 @@
 module Enotas
   module Endpoints
+    def create_nfe(empresa_id, body = {})
+      post "empresas/#{empresa_id}/nf-e", body
+    end
+
+    def get_nfe(empresa_id, id)
+      get "empresas/#{empresa_id}/nf-e/#{id}"
+    end
+
+    # TODO redo this whole list
     def nfe_list(firm_id, body = {})
       get("empresas/#{firm_id}/nfes", body)
     end

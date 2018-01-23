@@ -6,9 +6,9 @@ module Enotas
       attribute :ambienteEmissao, String
       attribute :naturezaOperacao, String
       attribute :finalidade, String
-      attribute :consumidorFinal, String
+      attribute :consumidorFinal, Boolean
       attribute :indicadorPresencaConsumidor, String
-      attribute :enviarPorEmail, String
+      attribute :enviarPorEmail, Boolean
 
       attribute :tipo, String
       attribute :idExterno, String

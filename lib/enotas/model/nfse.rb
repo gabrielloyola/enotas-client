@@ -6,7 +6,7 @@ module Enotas
       attribute :ambienteEmissao, String
       attribute :tipo, String
       attribute :idExterno, String
-      attribute :consumidorFinal, String
+      attribute :consumidorFinal, Boolean
       attribute :indicadorPresencaConsumidor, String
       attribute :valorTotal, String
       attribute :idExternoSubstituir, Float
