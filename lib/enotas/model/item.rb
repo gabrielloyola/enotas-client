@@ -5,6 +5,7 @@ module Enotas
 
       attribute :cfop, String
       attribute :codigo, String
+      attribute :sku, String
       attribute :descricao, String
       attribute :ncm, String
       attribute :quantidade, Integer
