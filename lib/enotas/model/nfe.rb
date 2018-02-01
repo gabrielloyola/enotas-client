@@ -2,20 +2,16 @@ module Enotas
   module Model
     class Nfe < Nf
       attribute :id, String
-      attribute :enviarPorEmail, String
-      attribute :ambienteEmissao, String
+      attribute :numero, Integer
+      attribute :serie, String
       attribute :naturezaOperacao, String
+      attribute :tipoOperacao, String
       attribute :finalidade, String
+      attribute :ambienteEmissao, String
       attribute :consumidorFinal, Boolean
       attribute :indicadorPresencaConsumidor, String
+      attribute :indicadorFormaPagamento, String
       attribute :enviarPorEmail, Boolean
-
-      attribute :tipo, String
-      attribute :idExterno, String
-      attribute :valorTotal, String
-      attribute :idExternoSubstituir, Float
-      attribute :nfeIdSubstitituir, Float
-
       attribute :informacoesAdicionais, String
 
       attribute :itens, Array[Item]
