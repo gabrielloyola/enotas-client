@@ -13,6 +13,8 @@ module Enotas
       attribute :indicadorFormaPagamento, String
       attribute :enviarPorEmail, Boolean
       attribute :informacoesAdicionais, String
+      attribute :cst, String
+      attribute :csosn, String
 
       attribute :itens, Array[Item]
       attribute :transporte, Transporte
