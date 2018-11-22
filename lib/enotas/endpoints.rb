@@ -1,52 +1,56 @@
 module Enotas
   module Endpoints
-    def create_nfe(empresa_id, body = {})
-      post "empresas/#{empresa_id}/nf-e", body
+    def create_nfe(company_id, body = {})
+      post "empresas/#{company_id}/nf-e", body
     end
 
-    def get_nfe(empresa_id, id)
-      get "empresas/#{empresa_id}/nf-e/#{id}"
+    def get_nfe(company_id, id)
+      get "empresas/#{company_id}/nf-e/#{id}"
+    end
+
+    def delete_nfe(company_id, id)
+      delete "empresas/#{company_id}/nf-e/#{id}"
     end
 
     # TODO redo this whole list
-    def nfe_list(firm_id, body = {})
-      get("empresas/#{firm_id}/nfes", body)
+    def nfse_list(company_id, body = {})
+      get("empresas/#{company_id}/nfes", body)
     end
 
-    def nfe_create(firm_id, body)
-      post("empresas/#{firm_id}/nfes", body)
+    def nfse_create(company_id, body)
+      post("empresas/#{company_id}/nfes", body)
     end
 
-    def nfe_delete(firm_id, nfe_id)
-      delete("empresas/#{firm_id}/nfes/#{nfe_id}")
+    def nfse_delete(company_id, nfe_id)
+      delete("empresas/#{company_id}/nfes/#{nfe_id}")
     end
 
-    def nfe_get(firm_id, id)
-      get("empresas/#{firm_id}/nfes/#{id}")
+    def nfse_get(company_id, id)
+      get("empresas/#{company_id}/nfes/#{id}")
     end
 
-    def nfe_get_by_external_id(firm_id, external_id)
-      get("empresas/#{firm_id}/nfes/#{external_id}")
+    def nfse_get_by_external_id(company_id, external_id)
+      get("empresas/#{company_id}/nfes/#{external_id}")
     end
 
-    def nfe_delete_by_external_id(firm_id, external_id)
-      delete("empresas/#{firm_id}/nfes/#{external_id}")
+    def nfse_delete_by_external_id(company_id, external_id)
+      delete("empresas/#{company_id}/nfes/#{external_id}")
     end
 
-    def nfe_get_pdf(firm_id, id)
-      get("empresas/#{firm_id}/nfes/#{id}")
+    def nfse_get_pdf(company_id, id)
+      get("empresas/#{company_id}/nfes/#{id}")
     end
 
-    def nfe_get_pdf_by_external_id(firm_id, external_id)
-      get("empresas/#{firm_id}/nfes/#{external_id}/pdf")
+    def nfse_get_pdf_by_external_id(company_id, external_id)
+      get("empresas/#{company_id}/nfes/#{external_id}/pdf")
     end
 
-    def nfe_get_xml(firm_id, id)
-      get("empresas/#{firm_id}/nfes/#{id}/xml")
+    def nfse_get_xml(company_id, id)
+      get("empresas/#{company_id}/nfes/#{id}/xml")
     end
 
-    def nfe_get_xml_by_external_id(firm_id, external_id)
-      get("empresas/#{firm_id}/nfes/#{external_id}/xml")
+    def nfse_get_xml_by_external_id(company_id, external_id)
+      get("empresas/#{company_id}/nfes/#{external_id}/xml")
     end
   end
 end

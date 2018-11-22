@@ -17,6 +17,14 @@ module Enotas
       response.body
     end
 
+    def delete(path, body = {})
+      response = connection.send(:delete) do |request|
+        request.url encoded_path(path), serialized_body(body)
+      end
+
+      response.body
+    end
+
     private
 
     def encoded_path(path)

@@ -6,12 +6,15 @@ module Enotas
     end
 
     def call(env)
-      if @auth_token
-        env[:request_headers] = env[:request_headers]
-          .merge("Authorization": "Basic #{@auth_token}")
-      end
-
+      include_authorization_header!(env)
       @app.call env
+    end
+
+    private
+
+    def include_authorization_header!(env)
+      env[:request_headers] ||= {}
+      env[:request_headers].merge!("Authorization": "Basic #{@auth_token}") if @auth_token
     end
   end
 end

@@ -35,5 +35,4 @@ require "enotas/facades"
 
 require "enotas/client"
 
-module Enotas
-end
+module Enotas; end
