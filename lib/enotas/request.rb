@@ -5,7 +5,7 @@ module Enotas
         request.url encoded_path(path), serialized_body(body)
       end
 
-      response.body
+      response
     end
 
     def post(path, body = {})
@@ -14,7 +14,7 @@ module Enotas
         request.body = serialized_body(body).to_json
       end
 
-      response.body
+      response
     end
 
     def delete(path, body = {})
@@ -22,7 +22,7 @@ module Enotas
         request.url encoded_path(path), serialized_body(body)
       end
 
-      response.body
+      response
     end
 
     private

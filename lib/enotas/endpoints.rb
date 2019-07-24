@@ -4,10 +4,6 @@ module Enotas
       get "empresas/#{company_id}"
     end
 
-    def get_company_list(page_number: 0, page_size: 5)
-      get "empresas?pageNumber=#{page_number}&pageSize=#{page_size}"
-    end
-
     def create_nfe(company_id, body = {})
       post "empresas/#{company_id}/nf-e", body
     end
