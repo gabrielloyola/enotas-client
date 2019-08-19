@@ -4,6 +4,28 @@ module Enotas
       get "empresas/#{company_id}"
     end
 
+    def get_city_service_codes(
+      state:, city:, page_number: 0, page_size: 150, search: nil
+    )
+      path = "estados/#{state}/cidades/#{city}/servicos"
+      filter_query = "filter=contains(descricao, #{search || "''"})"
+      page_number = "&pageNumber=#{page_number || 0}"
+      page_size = "&pageSize=#{page_size || 150}"
+
+      get "#{path}?#{filter_query}#{page_number}#{page_size}"
+    end
+
+    def get_city_service_by_code(
+      state:, city:, page_number: 0, page_size: 150, code:
+    )
+      path = "estados/#{state}/cidades/#{city}/servicos"
+      filter_query = "filter=codigo eq 'code'"
+      page_number = "&pageNumber=#{page_number}"
+      page_size = "&pageSize=#{page_size}"
+
+      get "#{path}?#{filter_query}#{page_number}#{page_size}"
+    end
+
     def create_nfe(company_id, body = {})
       post "empresas/#{company_id}/nf-e", body
     end
