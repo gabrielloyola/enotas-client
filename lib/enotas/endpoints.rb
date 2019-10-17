@@ -1,6 +1,10 @@
 module Enotas
   module Endpoints
-    def check_company(company_id)
+    def create_company(body = {})
+      post "empresas", body
+    end
+
+    def get_company(company_id)
       get "empresas/#{company_id}"
     end
 
