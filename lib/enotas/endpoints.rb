@@ -1,6 +1,6 @@
 module Enotas
   module Endpoints
-    def create_company(body = {})
+    def upsert_company(body = {})
       post "empresas", body
     end
 
